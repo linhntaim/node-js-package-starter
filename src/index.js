@@ -1,1 +1,4 @@
-console.log('Hello World')
+import * as config from './config'
+
+console.log(config.env)
+console.log(config.app)
