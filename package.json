@@ -1,7 +1,7 @@
 {
-    "name": "node-js-package-starter",
+    "name": "package-starter",
     "version": "1.0.0",
-    "description": "To develop a Node.js package from the scratch",
+    "description": "To develop a Node.js package from the scratch.",
     "main": "dist/index.js",
     "exports": {
         ".": {
@@ -14,11 +14,12 @@
         "build": "babel ./src -d ./dist -D --delete-dir-on-start",
         "test": "nyc mocha ./tests --require @babel/register",
         "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "ready": "npm i && npm run build && npm test"
+        "ci": "npm i && npm run build && npm test",
+        "cia": "npm run ci && npm run coverage"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/linhntaim/node-js-package-starter.git"
+        "url": "https://github.com/linhntaim/package-starter.git"
     },
     "keywords": [
         "package",
@@ -27,9 +28,9 @@
     "author": "Nguyen Tuan Linh <contact@linhntaim.com> (https://www.linhntaim.com)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/linhntaim/node-js-package-starter/issues"
+        "url": "https://github.com/linhntaim/package-starter/issues"
     },
-    "homepage": "https://github.com/linhntaim/node-js-package-starter#readme",
+    "homepage": "https://github.com/linhntaim/package-starter#readme",
     "devDependencies": {
         "@babel/cli": "^7.23.0",
         "@babel/core": "^7.23.0",
@@ -37,7 +38,7 @@
         "@babel/register": "^7.22.15",
         "babel-plugin-add-module-exports": "^1.0.4",
         "chai": "^4.3.10",
-        "coveralls": "^3.1.1",
+        "coveralls-next": "^4.2.0",
         "mocha": "^10.2.0",
         "nyc": "^15.1.0"
     }
